@@ -1,5 +1,5 @@
 [package]
-name = "christmas"
+name = "rustmas"
 version = "0.1.0"
 authors = ["Adrian Mowat <adrian.mowat@gmail.com>"]
 edition = "2018"
