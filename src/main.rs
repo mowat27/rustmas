@@ -29,6 +29,8 @@ fn nth(day: &Day) -> String {
 fn print_song(days: [Day; 12]) {
     for n in 1..=12 {
         for (i, day) in days.iter().skip(12 - n).enumerate() {
+            // There has to be a nicer way of doing this
+            // would Enums + matches help?
             if i == 0 {
                 println!("\n{}", day.lyric());
             }
