@@ -11,19 +11,19 @@ impl Day {
     fn lyric(&self) -> String {
         format!(
             "On the {} day of Christmas, my true love gave to me...",
-            nth(&self.num)
+            nth(&self)
         )
     }
 }
 
-fn nth(n: &usize) -> String {
-    let suffix = match &n {
+fn nth(day: &Day) -> String {
+    let suffix = match day.num {
         1 => String::from("st"),
         2 => String::from("nd"),
         3 => String::from("rd"),
         _ => String::from("th"),
     };
-    format!("{}{}", n, suffix)
+    format!("{}{}", day.num, suffix)
 }
 
 fn print_song(days: [Day; 12]) {
